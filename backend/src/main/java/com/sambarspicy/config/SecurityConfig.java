@@ -80,7 +80,7 @@ public class SecurityConfig {
                 .accessDeniedHandler(restAccessDeniedHandler)
             )
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.GET, "/api/v1/public/menu").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/v1/public/menu", "/health", "/api/v1/health").permitAll()
                 // Public authentication and resource endpoints
                 .requestMatchers(
                     "/api/auth/login", "/api/auth/refresh", "/api/auth/logout", "/api/auth/csrf",
@@ -172,8 +172,17 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.stream(allowedOrigins.split(","))
-                .map(String::trim).filter(origin -> !origin.isEmpty()).toList());
+        List<String> explicitOrigins = Arrays.stream(allowedOrigins.split(","))
+                .map(String::trim)
+                .filter(origin -> !origin.isEmpty())
+                .toList();
+        config.setAllowedOrigins(explicitOrigins);
+        // Dynamically allow Vercel production and preview deployment URLs (*.vercel.app)
+        config.setAllowedOriginPatterns(List.of(
+                "https://*.vercel.app",
+                "http://localhost:[*]",
+                "http://127.0.0.1:[*]"
+        ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
