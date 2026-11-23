@@ -17,7 +17,7 @@ import java.util.Objects;
 public class User {
 
     @Id
-    @Column(name = "id", nullable = false, columnDefinition = "TINYINT UNSIGNED")
+    @Column(name = "id", nullable = false)
     @JdbcTypeCode(SqlTypes.TINYINT)
     private Integer id;
 

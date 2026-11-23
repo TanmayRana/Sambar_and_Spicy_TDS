@@ -47,7 +47,7 @@ public class BillPayment {
     private String referenceNumber;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "recorded_by", nullable = false, columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "recorded_by", nullable = false)
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User recordedBy;
 

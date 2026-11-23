@@ -38,7 +38,7 @@ public class OperatingExpense {
     private BigDecimal amount;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "created_by", nullable = false, columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "created_by", nullable = false)
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User createdBy;
 

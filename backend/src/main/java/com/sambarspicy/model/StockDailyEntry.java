@@ -27,7 +27,7 @@ public class StockDailyEntry {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "request_key", length = 36, unique = true, columnDefinition = "CHAR(36)")
+    @Column(name = "request_key", length = 36, unique = true)
     @JdbcTypeCode(SqlTypes.CHAR)
     private String requestKey;
 
@@ -48,7 +48,7 @@ public class StockDailyEntry {
     private String notes;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "created_by", nullable = false, columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "created_by", nullable = false)
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User createdBy;
 

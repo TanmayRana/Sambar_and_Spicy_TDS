@@ -86,10 +86,15 @@ public class PublicMenuCache {
                 try {
                     PublicMenu result = mapper.readValue(cached, PublicMenu.class);
                     if (result != null && result.store() != null && result.store().name() != null &&
-                            result.categories() != null && result.items() != null) return result;
+                            result.categories() != null && result.items() != null) {
+                        log.info(">>> [REDIS CACHE HIT] Serving public menu directly from Redis (revision {})", revision);
+                        return result;
+                    }
                     log.warn("Ignoring incomplete public-menu cache data.");
                 }
                 catch (JsonProcessingException invalid) { log.warn("Ignoring invalid public-menu cache data."); }
+            } else {
+                log.info(">>> [REDIS CACHE MISS] Public menu not in Redis. Will fetch from Database and cache.");
             }
         } catch (RuntimeException failure) {
             markUnavailable();
@@ -126,10 +131,15 @@ public class PublicMenuCache {
             if (cached != null) {
                 try {
                     List<T> value = mapper.readValue(cached, type);
-                    if (value != null && !value.contains(null)) return value;
+                    if (value != null && !value.contains(null)) {
+                        log.info(">>> [REDIS CACHE HIT] Serving catalog [{}] from Redis", variant);
+                        return value;
+                    }
                 } catch (JsonProcessingException invalid) {
                     log.warn("Ignoring invalid catalog cache data.");
                 }
+            } else {
+                log.info(">>> [REDIS CACHE MISS] Catalog [{}] not in Redis. Loading from Database...", variant);
             }
         } catch (RuntimeException failure) {
             markUnavailable();

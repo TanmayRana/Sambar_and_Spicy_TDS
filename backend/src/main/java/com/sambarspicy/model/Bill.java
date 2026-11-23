@@ -34,7 +34,7 @@ public class Bill {
     @Column(name = "bill_number", length = 40, unique = true)
     private String billNumber;
 
-    @Column(name = "checkout_key", length = 36, unique = true, columnDefinition = "CHAR(36)")
+    @Column(name = "checkout_key", length = 36, unique = true)
     @JdbcTypeCode(SqlTypes.CHAR)
     private String checkoutKey;
 
@@ -76,17 +76,17 @@ public class Bill {
     private String storePhoneSnapshot;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "created_by", nullable = false, columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "created_by", nullable = false)
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User createdBy;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "paid_by", columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "paid_by")
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User paidBy;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cancelled_by", columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "cancelled_by")
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User cancelledBy;
 

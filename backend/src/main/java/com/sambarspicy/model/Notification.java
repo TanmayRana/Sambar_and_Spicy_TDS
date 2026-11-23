@@ -56,7 +56,7 @@ public class Notification {
     private LocalDateTime lastNotifiedAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "read_by", columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "read_by")
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User readBy;
 

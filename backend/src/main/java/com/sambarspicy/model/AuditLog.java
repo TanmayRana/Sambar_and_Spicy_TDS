@@ -26,7 +26,7 @@ public class AuditLog {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "actor_user_id", columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "actor_user_id")
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User actorUser;
 
@@ -39,11 +39,11 @@ public class AuditLog {
     @Column(name = "entity_id", length = 64)
     private String entityId;
 
-    @Column(name = "old_data", columnDefinition = "json")
+    @Column(name = "old_data")
     @JdbcTypeCode(SqlTypes.JSON)
     private String oldData;
 
-    @Column(name = "new_data", columnDefinition = "json")
+    @Column(name = "new_data")
     @JdbcTypeCode(SqlTypes.JSON)
     private String newData;
 

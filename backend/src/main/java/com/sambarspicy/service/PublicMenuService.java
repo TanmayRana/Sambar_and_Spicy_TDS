@@ -38,7 +38,10 @@ public class PublicMenuService {
     }
 
     public PublicMenu getMenu() {
-        return cache.get(() -> menuTransaction.execute(status -> loadMenu()));
+        return cache.get(() -> menuTransaction.execute(status -> {
+            System.out.println(">>> [DATABASE HIT] Loading menu from MySQL Database...");
+            return loadMenu();
+        }));
     }
 
     private PublicMenu loadMenu() {

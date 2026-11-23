@@ -195,24 +195,20 @@ class EntityMappingVerificationTest {
     }
 
     @Test
-    @DisplayName("Verify TINYINT UNSIGNED and JSON column mappings for Hibernate schema-validation")
+    @DisplayName("Verify TINYINT and JSON column mappings for Hibernate schema-validation")
     void testTinyIntUnsignedAndJsonMappings() throws NoSuchFieldException {
         // User.id
         Field userId = User.class.getDeclaredField("id");
-        assertEquals("TINYINT UNSIGNED", userId.getAnnotation(Column.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, userId.getAnnotation(JdbcTypeCode.class).value());
 
         // StoreSetting.id & updatedBy
         Field storeId = StoreSetting.class.getDeclaredField("id");
-        assertEquals("TINYINT UNSIGNED", storeId.getAnnotation(Column.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, storeId.getAnnotation(JdbcTypeCode.class).value());
         Field storeUpdatedBy = StoreSetting.class.getDeclaredField("updatedBy");
-        assertEquals("TINYINT UNSIGNED", storeUpdatedBy.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, storeUpdatedBy.getAnnotation(JdbcTypeCode.class).value());
 
         // AuditLog actorUser, oldData, newData
         Field auditActor = AuditLog.class.getDeclaredField("actorUser");
-        assertEquals("TINYINT UNSIGNED", auditActor.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, auditActor.getAnnotation(JdbcTypeCode.class).value());
         Field oldData = AuditLog.class.getDeclaredField("oldData");
         assertEquals(SqlTypes.JSON, oldData.getAnnotation(JdbcTypeCode.class).value());
@@ -221,65 +217,51 @@ class EntityMappingVerificationTest {
 
         // AuthRefreshToken user
         Field authUser = AuthRefreshToken.class.getDeclaredField("user");
-        assertEquals("TINYINT UNSIGNED", authUser.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, authUser.getAnnotation(JdbcTypeCode.class).value());
 
         // Bill createdBy, paidBy, cancelledBy
         Field billCreated = Bill.class.getDeclaredField("createdBy");
-        assertEquals("TINYINT UNSIGNED", billCreated.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, billCreated.getAnnotation(JdbcTypeCode.class).value());
         Field billPaid = Bill.class.getDeclaredField("paidBy");
-        assertEquals("TINYINT UNSIGNED", billPaid.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, billPaid.getAnnotation(JdbcTypeCode.class).value());
         Field billCancelled = Bill.class.getDeclaredField("cancelledBy");
-        assertEquals("TINYINT UNSIGNED", billCancelled.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, billCancelled.getAnnotation(JdbcTypeCode.class).value());
 
         // BillPayment recordedBy
         Field paymentRecorded = BillPayment.class.getDeclaredField("recordedBy");
-        assertEquals("TINYINT UNSIGNED", paymentRecorded.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, paymentRecorded.getAnnotation(JdbcTypeCode.class).value());
 
         // StockPurchase createdBy
         Field purchaseCreated = StockPurchase.class.getDeclaredField("createdBy");
-        assertEquals("TINYINT UNSIGNED", purchaseCreated.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, purchaseCreated.getAnnotation(JdbcTypeCode.class).value());
 
         // StockDailyEntry createdBy
         Field dailyCreated = StockDailyEntry.class.getDeclaredField("createdBy");
-        assertEquals("TINYINT UNSIGNED", dailyCreated.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, dailyCreated.getAnnotation(JdbcTypeCode.class).value());
 
         // StockMovement recordedBy
         Field movementRecorded = StockMovement.class.getDeclaredField("recordedBy");
-        assertEquals("TINYINT UNSIGNED", movementRecorded.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, movementRecorded.getAnnotation(JdbcTypeCode.class).value());
 
         // OperatingExpense createdBy
         Field expenseCreated = OperatingExpense.class.getDeclaredField("createdBy");
-        assertEquals("TINYINT UNSIGNED", expenseCreated.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, expenseCreated.getAnnotation(JdbcTypeCode.class).value());
 
         // Notification readBy
         Field notificationRead = Notification.class.getDeclaredField("readBy");
-        assertEquals("TINYINT UNSIGNED", notificationRead.getAnnotation(JoinColumn.class).columnDefinition());
         assertEquals(SqlTypes.TINYINT, notificationRead.getAnnotation(JdbcTypeCode.class).value());
 
         // CHAR columns
         Field tokenHash = AuthRefreshToken.class.getDeclaredField("tokenHash");
-        assertEquals("CHAR(64)", tokenHash.getAnnotation(Column.class).columnDefinition());
         assertEquals(SqlTypes.CHAR, tokenHash.getAnnotation(JdbcTypeCode.class).value());
 
         Field currencyCode = StoreSetting.class.getDeclaredField("currencyCode");
-        assertEquals("CHAR(3)", currencyCode.getAnnotation(Column.class).columnDefinition());
         assertEquals(SqlTypes.CHAR, currencyCode.getAnnotation(JdbcTypeCode.class).value());
 
         Field checkoutKey = Bill.class.getDeclaredField("checkoutKey");
-        assertEquals("CHAR(36)", checkoutKey.getAnnotation(Column.class).columnDefinition());
         assertEquals(SqlTypes.CHAR, checkoutKey.getAnnotation(JdbcTypeCode.class).value());
 
         Field requestKey = StockDailyEntry.class.getDeclaredField("requestKey");
-        assertEquals("CHAR(36)", requestKey.getAnnotation(Column.class).columnDefinition());
         assertEquals(SqlTypes.CHAR, requestKey.getAnnotation(JdbcTypeCode.class).value());
     }
 }

@@ -21,11 +21,11 @@ public class AuthRefreshToken {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false, columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "user_id", nullable = false)
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User user;
 
-    @Column(name = "token_hash", nullable = false, length = 64, unique = true, columnDefinition = "CHAR(64)")
+    @Column(name = "token_hash", nullable = false, length = 64, unique = true)
     @JdbcTypeCode(SqlTypes.CHAR)
     private String tokenHash;
 

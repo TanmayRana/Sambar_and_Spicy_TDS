@@ -15,7 +15,7 @@ import java.util.Objects;
 public class StoreSetting {
 
     @Id
-    @Column(name = "id", nullable = false, columnDefinition = "TINYINT UNSIGNED")
+    @Column(name = "id", nullable = false)
     @JdbcTypeCode(SqlTypes.TINYINT)
     private Integer id = 1;
 
@@ -28,7 +28,7 @@ public class StoreSetting {
     @Column(name = "phone", nullable = false, length = 25)
     private String phone = "";
 
-    @Column(name = "currency_code", nullable = false, length = 3, columnDefinition = "CHAR(3)")
+    @Column(name = "currency_code", nullable = false, length = 3)
     @JdbcTypeCode(SqlTypes.CHAR)
     private String currencyCode = "INR";
 
@@ -39,7 +39,7 @@ public class StoreSetting {
     private String receiptFooter;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "updated_by", columnDefinition = "TINYINT UNSIGNED")
+    @JoinColumn(name = "updated_by")
     @JdbcTypeCode(SqlTypes.TINYINT)
     private User updatedBy;
 
