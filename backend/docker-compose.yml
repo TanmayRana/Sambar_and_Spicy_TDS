@@ -1,0 +1,28 @@
+services:
+  sambar-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: tanmayrana/sambar-spicy-backend:latest
+    container_name: sambar-spicy-backend
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL:-jdbc:postgresql://ep-shiny-shadow-bevig534-pooler.c-9.us-east-2.aws.neon.tech/neondb?sslmode=require}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME:-neondb_owner}
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD:-npg_c9FLGxwHh7PD}
+      - PUBLIC_MENU_CACHE_ENABLED=true
+      # Render Internal Redis or local redis container
+      - REDIS_URL=${REDIS_URL:-redis://central-redis:6379}
+      - REDIS_DATABASE=0
+      - REDIS_CONNECT_TIMEOUT=500ms
+      - REDIS_TIMEOUT=500ms
+      - APP_CORS_ALLOWED_ORIGINS=${APP_CORS_ALLOWED_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000}
+      - JWT_COOKIE_SECURE=${JWT_COOKIE_SECURE:-false}
+    volumes:
+      - backend-uploads:/app/uploads
+
+volumes:
+  backend-uploads:
