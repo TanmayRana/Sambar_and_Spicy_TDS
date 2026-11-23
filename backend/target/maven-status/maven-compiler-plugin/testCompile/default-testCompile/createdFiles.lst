@@ -1,0 +1,12 @@
+com\sambarspicy\UserBootstrapRunnerTest.class
+com\sambarspicy\PublicMenuIntegrationTest.class
+com\sambarspicy\ImageCleanupIntegrationTest.class
+com\sambarspicy\LocalEnvConfigurationTest.class
+com\sambarspicy\AuthServiceTest.class
+com\sambarspicy\NotificationControllerTest.class
+com\sambarspicy\SambarSpicyApplicationTests.class
+com\sambarspicy\EntityMappingVerificationTest.class
+com\sambarspicy\MenuManagementIntegrationTest.class
+com\sambarspicy\FileStorageServiceTest.class
+com\sambarspicy\StoreControllerTest.class
+com\sambarspicy\BillingIntegrationTest.class

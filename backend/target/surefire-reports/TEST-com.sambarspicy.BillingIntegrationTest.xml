@@ -1,0 +1,3732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.sambarspicy.BillingIntegrationTest" time="1.638" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="D:\TDS WORKS\Sambar and Spicy (2)\Sambar and Spicy\backend\target\test-classes;D:\TDS WORKS\Sambar and Spicy (2)\Sambar and Spicy\backend\target\classes;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.3.5\spring-boot-starter-web-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter\3.3.5\spring-boot-starter-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot\3.3.5\spring-boot-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.3.5\spring-boot-autoconfigure-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.3.5\spring-boot-starter-logging-3.3.5.jar;C:\Users\sayan\.m2\repository\ch\qos\logback\logback-classic\1.5.11\logback-classic-1.5.11.jar;C:\Users\sayan\.m2\repository\ch\qos\logback\logback-core\1.5.11\logback-core-1.5.11.jar;C:\Users\sayan\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.23.1\log4j-to-slf4j-2.23.1.jar;C:\Users\sayan\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\sayan\.m2\repository\org\slf4j\jul-to-slf4j\2.0.16\jul-to-slf4j-2.0.16.jar;C:\Users\sayan\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\sayan\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.3.5\spring-boot-starter-json-3.3.5.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.17.2\jackson-datatype-jdk8-2.17.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.17.2\jackson-datatype-jsr310-2.17.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.17.2\jackson-module-parameter-names-2.17.2.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.3.5\spring-boot-starter-tomcat-3.3.5.jar;C:\Users\sayan\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.31\tomcat-embed-core-10.1.31.jar;C:\Users\sayan\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.31\tomcat-embed-websocket-10.1.31.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-web\6.1.14\spring-web-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-beans\6.1.14\spring-beans-6.1.14.jar;C:\Users\sayan\.m2\repository\io\micrometer\micrometer-observation\1.13.6\micrometer-observation-1.13.6.jar;C:\Users\sayan\.m2\repository\io\micrometer\micrometer-commons\1.13.6\micrometer-commons-1.13.6.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-webmvc\6.1.14\spring-webmvc-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-context\6.1.14\spring-context-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-expression\6.1.14\spring-expression-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.3.5\spring-boot-starter-security-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-aop\6.1.14\spring-aop-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-config\6.3.4\spring-security-config-6.3.4.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-web\6.3.4\spring-security-web-6.3.4.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.3.5\spring-boot-starter-data-jpa-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.3.5\spring-boot-starter-aop-3.3.5.jar;C:\Users\sayan\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.3.5\spring-boot-starter-jdbc-3.3.5.jar;C:\Users\sayan\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-jdbc\6.1.14\spring-jdbc-6.1.14.jar;C:\Users\sayan\.m2\repository\org\hibernate\orm\hibernate-core\6.5.3.Final\hibernate-core-6.5.3.Final.jar;C:\Users\sayan\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\sayan\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\sayan\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\sayan\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\sayan\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\sayan\.m2\repository\net\bytebuddy\byte-buddy\1.14.19\byte-buddy-1.14.19.jar;C:\Users\sayan\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\sayan\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\sayan\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\sayan\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\sayan\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\sayan\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\sayan\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\sayan\.m2\repository\org\springframework\data\spring-data-jpa\3.3.5\spring-data-jpa-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\data\spring-data-commons\3.3.5\spring-data-commons-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-orm\6.1.14\spring-orm-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-tx\6.1.14\spring-tx-6.1.14.jar;C:\Users\sayan\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-aspects\6.1.14\spring-aspects-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\3.3.5\spring-boot-starter-data-redis-3.3.5.jar;C:\Users\sayan\.m2\repository\io\lettuce\lettuce-core\6.3.2.RELEASE\lettuce-core-6.3.2.RELEASE.jar;C:\Users\sayan\.m2\repository\io\netty\netty-common\4.1.114.Final\netty-common-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-handler\4.1.114.Final\netty-handler-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-resolver\4.1.114.Final\netty-resolver-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-buffer\4.1.114.Final\netty-buffer-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.114.Final\netty-transport-native-unix-common-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-codec\4.1.114.Final\netty-codec-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-transport\4.1.114.Final\netty-transport-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\projectreactor\reactor-core\3.6.11\reactor-core-3.6.11.jar;C:\Users\sayan\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\sayan\.m2\repository\org\springframework\data\spring-data-redis\3.3.5\spring-data-redis-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\data\spring-data-keyvalue\3.3.5\spring-data-keyvalue-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-oxm\6.1.14\spring-oxm-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-context-support\6.1.14\spring-context-support-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.3.5\spring-boot-starter-validation-3.3.5.jar;C:\Users\sayan\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.31\tomcat-embed-el-10.1.31.jar;C:\Users\sayan\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\sayan\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\sayan\.m2\repository\io\jsonwebtoken\jjwt-api\0.12.6\jjwt-api-0.12.6.jar;C:\Users\sayan\.m2\repository\io\jsonwebtoken\jjwt-impl\0.12.6\jjwt-impl-0.12.6.jar;C:\Users\sayan\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.12.6\jjwt-jackson-0.12.6.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;C:\Users\sayan\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\sayan\.m2\repository\org\flywaydb\flyway-core\10.10.0\flyway-core-10.10.0.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-toml\2.17.2\jackson-dataformat-toml-2.17.2.jar;C:\Users\sayan\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\sayan\.m2\repository\org\flywaydb\flyway-mysql\10.10.0\flyway-mysql-10.10.0.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.3.5\spring-boot-starter-test-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-test\3.3.5\spring-boot-test-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.3.5\spring-boot-test-autoconfigure-3.3.5.jar;C:\Users\sayan\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\sayan\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\sayan\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\sayan\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\sayan\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\sayan\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\sayan\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\sayan\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\sayan\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\sayan\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.5\junit-jupiter-5.10.5.jar;C:\Users\sayan\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.5\junit-jupiter-api-5.10.5.jar;C:\Users\sayan\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\sayan\.m2\repository\org\junit\platform\junit-platform-commons\1.10.5\junit-platform-commons-1.10.5.jar;C:\Users\sayan\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\sayan\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.5\junit-jupiter-params-5.10.5.jar;C:\Users\sayan\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.5\junit-jupiter-engine-5.10.5.jar;C:\Users\sayan\.m2\repository\org\junit\platform\junit-platform-engine\1.10.5\junit-platform-engine-1.10.5.jar;C:\Users\sayan\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\sayan\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar;C:\Users\sayan\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\sayan\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\sayan\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\sayan\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-core\6.1.14\spring-core-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-jcl\6.1.14\spring-jcl-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-test\6.1.14\spring-test-6.1.14.jar;C:\Users\sayan\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-test\6.3.4\spring-security-test-6.3.4.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-core\6.3.4\spring-security-core-6.3.4.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-crypto\6.3.4\spring-security-crypto-6.3.4.jar;C:\Users\sayan\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\sayan\AppData\Local\Temp\surefire3223508836690356437\surefirebooter-20261123023531067_3.jar C:\Users\sayan\AppData\Local\Temp\surefire3223508836690356437 2026-11-23T02-35-22_764-jvmRun1 surefire-20261123023531067_1tmp surefire_0-20261123023531067_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\TDS WORKS\Sambar and Spicy (2)\Sambar and Spicy\backend\target\test-classes;D:\TDS WORKS\Sambar and Spicy (2)\Sambar and Spicy\backend\target\classes;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.3.5\spring-boot-starter-web-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter\3.3.5\spring-boot-starter-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot\3.3.5\spring-boot-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.3.5\spring-boot-autoconfigure-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.3.5\spring-boot-starter-logging-3.3.5.jar;C:\Users\sayan\.m2\repository\ch\qos\logback\logback-classic\1.5.11\logback-classic-1.5.11.jar;C:\Users\sayan\.m2\repository\ch\qos\logback\logback-core\1.5.11\logback-core-1.5.11.jar;C:\Users\sayan\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.23.1\log4j-to-slf4j-2.23.1.jar;C:\Users\sayan\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\sayan\.m2\repository\org\slf4j\jul-to-slf4j\2.0.16\jul-to-slf4j-2.0.16.jar;C:\Users\sayan\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\sayan\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.3.5\spring-boot-starter-json-3.3.5.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.17.2\jackson-datatype-jdk8-2.17.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.17.2\jackson-datatype-jsr310-2.17.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.17.2\jackson-module-parameter-names-2.17.2.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.3.5\spring-boot-starter-tomcat-3.3.5.jar;C:\Users\sayan\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.31\tomcat-embed-core-10.1.31.jar;C:\Users\sayan\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.31\tomcat-embed-websocket-10.1.31.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-web\6.1.14\spring-web-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-beans\6.1.14\spring-beans-6.1.14.jar;C:\Users\sayan\.m2\repository\io\micrometer\micrometer-observation\1.13.6\micrometer-observation-1.13.6.jar;C:\Users\sayan\.m2\repository\io\micrometer\micrometer-commons\1.13.6\micrometer-commons-1.13.6.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-webmvc\6.1.14\spring-webmvc-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-context\6.1.14\spring-context-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-expression\6.1.14\spring-expression-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.3.5\spring-boot-starter-security-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-aop\6.1.14\spring-aop-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-config\6.3.4\spring-security-config-6.3.4.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-web\6.3.4\spring-security-web-6.3.4.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.3.5\spring-boot-starter-data-jpa-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.3.5\spring-boot-starter-aop-3.3.5.jar;C:\Users\sayan\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.3.5\spring-boot-starter-jdbc-3.3.5.jar;C:\Users\sayan\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-jdbc\6.1.14\spring-jdbc-6.1.14.jar;C:\Users\sayan\.m2\repository\org\hibernate\orm\hibernate-core\6.5.3.Final\hibernate-core-6.5.3.Final.jar;C:\Users\sayan\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\sayan\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\sayan\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\sayan\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\sayan\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\sayan\.m2\repository\net\bytebuddy\byte-buddy\1.14.19\byte-buddy-1.14.19.jar;C:\Users\sayan\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\sayan\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\sayan\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\sayan\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\sayan\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\sayan\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\sayan\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\sayan\.m2\repository\org\springframework\data\spring-data-jpa\3.3.5\spring-data-jpa-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\data\spring-data-commons\3.3.5\spring-data-commons-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-orm\6.1.14\spring-orm-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-tx\6.1.14\spring-tx-6.1.14.jar;C:\Users\sayan\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-aspects\6.1.14\spring-aspects-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-data-redis\3.3.5\spring-boot-starter-data-redis-3.3.5.jar;C:\Users\sayan\.m2\repository\io\lettuce\lettuce-core\6.3.2.RELEASE\lettuce-core-6.3.2.RELEASE.jar;C:\Users\sayan\.m2\repository\io\netty\netty-common\4.1.114.Final\netty-common-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-handler\4.1.114.Final\netty-handler-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-resolver\4.1.114.Final\netty-resolver-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-buffer\4.1.114.Final\netty-buffer-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.114.Final\netty-transport-native-unix-common-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-codec\4.1.114.Final\netty-codec-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\netty\netty-transport\4.1.114.Final\netty-transport-4.1.114.Final.jar;C:\Users\sayan\.m2\repository\io\projectreactor\reactor-core\3.6.11\reactor-core-3.6.11.jar;C:\Users\sayan\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\sayan\.m2\repository\org\springframework\data\spring-data-redis\3.3.5\spring-data-redis-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\data\spring-data-keyvalue\3.3.5\spring-data-keyvalue-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-oxm\6.1.14\spring-oxm-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-context-support\6.1.14\spring-context-support-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.3.5\spring-boot-starter-validation-3.3.5.jar;C:\Users\sayan\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.31\tomcat-embed-el-10.1.31.jar;C:\Users\sayan\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\sayan\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\sayan\.m2\repository\io\jsonwebtoken\jjwt-api\0.12.6\jjwt-api-0.12.6.jar;C:\Users\sayan\.m2\repository\io\jsonwebtoken\jjwt-impl\0.12.6\jjwt-impl-0.12.6.jar;C:\Users\sayan\.m2\repository\io\jsonwebtoken\jjwt-jackson\0.12.6\jjwt-jackson-0.12.6.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;C:\Users\sayan\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\sayan\.m2\repository\org\flywaydb\flyway-core\10.10.0\flyway-core-10.10.0.jar;C:\Users\sayan\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-toml\2.17.2\jackson-dataformat-toml-2.17.2.jar;C:\Users\sayan\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\sayan\.m2\repository\org\flywaydb\flyway-mysql\10.10.0\flyway-mysql-10.10.0.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.3.5\spring-boot-starter-test-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-test\3.3.5\spring-boot-test-3.3.5.jar;C:\Users\sayan\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.3.5\spring-boot-test-autoconfigure-3.3.5.jar;C:\Users\sayan\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\sayan\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\sayan\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\sayan\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\sayan\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\sayan\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\sayan\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\sayan\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\sayan\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\sayan\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.5\junit-jupiter-5.10.5.jar;C:\Users\sayan\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.5\junit-jupiter-api-5.10.5.jar;C:\Users\sayan\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\sayan\.m2\repository\org\junit\platform\junit-platform-commons\1.10.5\junit-platform-commons-1.10.5.jar;C:\Users\sayan\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\sayan\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.5\junit-jupiter-params-5.10.5.jar;C:\Users\sayan\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.5\junit-jupiter-engine-5.10.5.jar;C:\Users\sayan\.m2\repository\org\junit\platform\junit-platform-engine\1.10.5\junit-platform-engine-1.10.5.jar;C:\Users\sayan\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\sayan\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.19\byte-buddy-agent-1.14.19.jar;C:\Users\sayan\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\sayan\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\sayan\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\sayan\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-core\6.1.14\spring-core-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-jcl\6.1.14\spring-jcl-6.1.14.jar;C:\Users\sayan\.m2\repository\org\springframework\spring-test\6.1.14\spring-test-6.1.14.jar;C:\Users\sayan\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-test\6.3.4\spring-security-test-6.3.4.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-core\6.3.4\spring-security-core-6.3.4.jar;C:\Users\sayan\.m2\repository\org\springframework\security\spring-security-crypto\6.3.4\spring-security-crypto-6.3.4.jar;C:\Users\sayan\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\TDS WORKS\Sambar and Spicy (2)\Sambar and Spicy\backend"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\sayan\AppData\Local\Temp\surefire3223508836690356437\surefirebooter-20261123023531067_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.8+12-LTS-250"/>
+    <property name="user.name" value="sayan"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\sayan\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\sayan\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="user.dir" value="D:\TDS WORKS\Sambar and Spicy (2)\Sambar and Spicy\backend"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="25640"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\sayan\.codex\tmp\arg0-windows\codex-arg08z79sc;C:\Program Files\Java\jdk-17\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\sayan\AppData\Local\Programs\Python\Python310-32;C:\Users\sayan\AppData\Local\Programs\Python\Python310-32\Scripts;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-21\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\WSL\;C:\Users\sayan\.config\herd\bin;C:\Users\sayan\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\sayan\AppData\Local\Programs\Python\Python310\;C:\Users\sayan\AppData\Local\Microsoft\WindowsApps;C:\Users\sayan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\sayan\AppData\Roaming\npm;C:\Users\sayan\AppData\Local\Programs\Python\Python310;C:\Users\sayan\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\sayan\AppData\Local\Programs\Ollama;C:\Users\sayan\AppData\Local\Programs\Antigravity\bin;C:\Users\sayan\AppData\Local\Android\Sdk\platform-tools;C:\Users\sayan\AppData\Local\Programs\Antigravity IDE\bin;D:\Priority Solution\cursor\resources\app\bin;C:\Users\sayan\.dotnet\tools;C:\Users\sayan\AppData\Local\Programs\Microsoft VS Code\bin\copilot-shim;C:\Users\sayan\AppData\Local\Programs\DockerDesktop\resources\bin;c:\Users\sayan\.vscode\extensions\openai.chatgpt-26.1117.41037-win32-x64\bin\windows-x86_64;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.8+12-LTS-250"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="maven.repo.local" value="C:\Users\sayan\.m2\repository"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[sambar-spicy-backend] "/>
+  </properties>
+  <testcase name="invalidPaymentAndChangedPriceDoNotCreateBills" classname="com.sambarspicy.BillingIntegrationTest" time="0.453">
+    <system-out><![CDATA[2026-11-23T02:36:00.303+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [BillingIntegrationTest]: using SpringBootContextLoader
+2026-11-23T02:36:00.304+05:30  INFO 25640 --- [sambar-spicy-backend] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.sambarspicy.BillingIntegrationTest]: BillingIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-23T02:36:00.307+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Using ContextCustomizerFactory implementations for test class [BillingIntegrationTest]: [ImportsContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, HttpGraphQlTesterContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, MockitoContextCustomizerFactory, TestRestTemplateContextCustomizerFactory, WebTestClientContextCustomizerFactory, DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory, OnFailureConditionReportContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ObservabilityContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, PropertyMappingContextCustomizerFactory, WebDriverContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+2026-11-23T02:36:00.315+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Using ContextCustomizers for test class [BillingIntegrationTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer, OnFailureConditionReportContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer]
+2026-11-23T02:36:00.318+05:30  INFO 25640 --- [sambar-spicy-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.sambarspicy.SambarSpicyApplication for test class com.sambarspicy.BillingIntegrationTest
+2026-11-23T02:36:00.320+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners for test class [BillingIntegrationTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, WithSecurityContextTestExecutionListener, ReactorContextTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2026-11-23T02:36:00.351+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=?
+2026-11-23T02:36:00.355+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=?
+2026-11-23T02:36:00.357+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        store_settings
+        (address, business_timezone, currency_code, phone, receipt_footer, store_name, updated_at, updated_by, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:00.362+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        categories
+        (created_at, image_path, is_active, name, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:00.368+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (category_id, created_at, description, dietary_type, estimated_unit_cost, half_estimated_unit_cost, half_selling_price, has_half_portion, image_path, is_available, name, selling_price, sku, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:00.382+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:00.494+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=1, portion=FULL, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:00.703+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:00.707+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:00.719+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:00.724+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:00.730+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:00.733+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:00.735+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:00.740+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.sambarspicy.exception.GlobalExceptionHandler#handleIllegalArgument(IllegalArgumentException)
+2026-11-23T02:36:00.740+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:00.740+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.sambarspicy.dto.ErrorResponse@55326912]
+2026-11-23T02:36:00.741+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IllegalArgumentException: Invalid payment amount]
+2026-11-23T02:36:00.743+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:00.748+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:00.750+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        menu_items 
+    set
+        category_id=?,
+        description=?,
+        dietary_type=?,
+        estimated_unit_cost=?,
+        half_estimated_unit_cost=?,
+        half_selling_price=?,
+        has_half_portion=?,
+        image_path=?,
+        is_available=?,
+        name=?,
+        selling_price=?,
+        sku=?,
+        sort_order=?,
+        updated_at=? 
+    where
+        id=?
+2026-11-23T02:36:00.752+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:00.754+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=1, portion=FULL, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:00.758+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:00.761+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:00.769+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:00.772+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:00.774+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:00.776+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.sambarspicy.exception.GlobalExceptionHandler#handleConflict(ConflictException)
+2026-11-23T02:36:00.776+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:00.776+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.sambarspicy.dto.ErrorResponse@64b67763]
+2026-11-23T02:36:00.778+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.sambarspicy.exception.ConflictException: Dish price changed. Remove and re-add the item before checkout: Dosa]
+]]></system-out>
+  </testcase>
+  <testcase name="concurrentIdenticalCheckoutRequestsReturnSameBill" classname="com.sambarspicy.BillingIntegrationTest" time="0.235">
+    <system-out><![CDATA[2026-11-23T02:36:00.789+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=?
+2026-11-23T02:36:00.791+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        categories
+        (created_at, image_path, is_active, name, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:00.793+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (category_id, created_at, description, dietary_type, estimated_unit_cost, half_estimated_unit_cost, half_selling_price, has_half_portion, image_path, is_available, name, selling_price, sku, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:00.809+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:00.809+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:00.811+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=2, portion=FULL, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:00.811+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=2, portion=FULL, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:00.817+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:00.818+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-2] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:00.820+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:00.824+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:00.826+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:00.830+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:00.835+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:00.837+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:00.841+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        bc1_0.business_date,
+        bc1_0.last_sequence,
+        bc1_0.updated_at 
+    from
+        bill_counters bc1_0 
+    where
+        bc1_0.business_date=? for update
+2026-11-23T02:36:00.845+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    select
+        bc1_0.business_date,
+        bc1_0.last_sequence,
+        bc1_0.updated_at 
+    from
+        bill_counters bc1_0 
+    where
+        bc1_0.business_date=?
+2026-11-23T02:36:00.848+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_counters
+        (last_sequence, updated_at, business_date) 
+    values
+        (?, ?, ?)
+2026-11-23T02:36:00.857+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        bills
+        (bill_number, business_date, cancel_reason, cancelled_at, cancelled_by, checkout_key, created_at, created_by, discount_amount, held_at, hold_label, item_count, note, paid_at, paid_by, round_off_amount, status, store_address_snapshot, store_name_snapshot, store_phone_snapshot, subtotal_amount, total_amount, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:00.861+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:00.864+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:00.866+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_payments
+        (amount, bill_id, payment_method, recorded_at, recorded_by, reference_number, tendered_amount) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:00.877+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        audit_logs
+        (action, actor_user_id, created_at, entity_id, entity_type, ip_address, new_data, old_data) 
+    values
+        (?, ?, ?, ?, ?, ?, cast(? as json), cast(? as json))
+2026-11-23T02:36:00.896+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:00.907+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-2] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:00.923+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-2] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:00.924+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:00.941+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-2] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:00.953+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:00.984+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=1, billNumber=SNS-20261123-0001, checkoutKey=e2ba836a-ddcf-4176-a6de-1842f5c379a3, busines (truncated)...]
+2026-11-23T02:36:00.984+05:30 DEBUG 25640 --- [sambar-spicy-backend] [pool-3-thread-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=1, billNumber=SNS-20261123-0001, checkoutKey=e2ba836a-ddcf-4176-a6de-1842f5c379a3, busines (truncated)...]
+]]></system-out>
+  </testcase>
+  <testcase name="heldBillCheckoutAndRetryKeepPortionsAndOnePayment" classname="com.sambarspicy.BillingIntegrationTest" time="0.298">
+    <system-out><![CDATA[2026-11-23T02:36:01.024+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=?
+2026-11-23T02:36:01.026+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        categories
+        (created_at, image_path, is_active, name, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.029+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (category_id, created_at, description, dietary_type, estimated_unit_cost, half_estimated_unit_cost, half_selling_price, has_half_portion, image_path, is_available, name, selling_price, sku, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.036+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#hold(BillRequest, Principal)
+2026-11-23T02:36:01.044+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [BillRequest[items=[LineRequest[menuItemId=3, portion=FULL, quantity=1, lineDiscountAmount=null, expe (truncated)...]
+2026-11-23T02:36:01.052+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.056+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.059+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:01.062+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:01.066+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:01.067+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:01.068+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bills
+        (bill_number, business_date, cancel_reason, cancelled_at, cancelled_by, checkout_key, created_at, created_by, discount_amount, held_at, hold_label, item_count, note, paid_at, paid_by, round_off_amount, status, store_address_snapshot, store_name_snapshot, store_phone_snapshot, subtotal_amount, total_amount, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.071+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.072+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.074+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        audit_logs
+        (action, actor_user_id, created_at, entity_id, entity_type, ip_address, new_data, old_data) 
+    values
+        (?, ?, ?, ?, ?, ?, cast(? as json), cast(? as json))
+2026-11-23T02:36:01.076+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.078+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=2, billNumber=null, checkoutKey=null, businessDate=2026-11-23, status=HELD, holdLabel=Coun (truncated)...]
+2026-11-23T02:36:01.160+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.163+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=3, portion=FULL, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.166+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.169+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.175+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.181+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.id=? for update
+2026-11-23T02:36:01.182+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.186+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.191+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:01.193+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:01.197+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:01.200+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:01.213+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        bill_items 
+    where
+        id=?
+2026-11-23T02:36:01.217+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    delete 
+    from
+        bill_items 
+    where
+        id=?
+2026-11-23T02:36:01.218+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.220+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.224+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bc1_0.business_date,
+        bc1_0.last_sequence,
+        bc1_0.updated_at 
+    from
+        bill_counters bc1_0 
+    where
+        bc1_0.business_date=? for update
+2026-11-23T02:36:01.226+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        bill_counters 
+    set
+        last_sequence=?,
+        updated_at=? 
+    where
+        business_date=?
+2026-11-23T02:36:01.231+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_payments
+        (amount, bill_id, payment_method, recorded_at, recorded_by, reference_number, tendered_amount) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.234+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        bills 
+    set
+        bill_number=?,
+        business_date=?,
+        cancel_reason=?,
+        cancelled_at=?,
+        cancelled_by=?,
+        checkout_key=?,
+        created_by=?,
+        discount_amount=?,
+        held_at=?,
+        hold_label=?,
+        item_count=?,
+        note=?,
+        paid_at=?,
+        paid_by=?,
+        round_off_amount=?,
+        status=?,
+        store_address_snapshot=?,
+        store_name_snapshot=?,
+        store_phone_snapshot=?,
+        subtotal_amount=?,
+        total_amount=?,
+        updated_at=? 
+    where
+        id=?
+2026-11-23T02:36:01.240+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        audit_logs
+        (action, actor_user_id, created_at, entity_id, entity_type, ip_address, new_data, old_data) 
+    values
+        (?, ?, ?, ?, ?, ?, cast(? as json), cast(? as json))
+2026-11-23T02:36:01.244+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.244+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=2, billNumber=SNS-20261123-0002, checkoutKey=a4d9970b-00b9-4497-be47-f9052560e88d, busines (truncated)...]
+2026-11-23T02:36:01.254+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.255+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=3, portion=FULL, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.258+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.262+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.268+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.270+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.272+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.274+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.274+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=2, billNumber=SNS-20261123-0002, checkoutKey=a4d9970b-00b9-4497-be47-f9052560e88d, busines (truncated)...]
+2026-11-23T02:36:01.279+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.280+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=3, portion=FULL, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.283+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.285+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.287+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.287+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.288+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.sambarspicy.exception.GlobalExceptionHandler#handleConflict(ConflictException)
+2026-11-23T02:36:01.288+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.289+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.sambarspicy.dto.ErrorResponse@36ee2e3a]
+2026-11-23T02:36:01.289+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.sambarspicy.exception.ConflictException: Checkout key already belongs to a different payment]
+2026-11-23T02:36:01.291+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#cancel(Long, CancelRequest, Principal)
+2026-11-23T02:36:01.294+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CancelRequest[reason=changed mind]]
+2026-11-23T02:36:01.301+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.304+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.306+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.id=? for update
+2026-11-23T02:36:01.308+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.310+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.sambarspicy.exception.GlobalExceptionHandler#handleConflict(ConflictException)
+2026-11-23T02:36:01.310+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.310+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.sambarspicy.dto.ErrorResponse@29b96be0]
+2026-11-23T02:36:01.311+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.sambarspicy.exception.ConflictException: Only held bills can be changed]
+]]></system-out>
+  </testcase>
+  <testcase name="readOnlyCanViewButCannotHold" classname="com.sambarspicy.BillingIntegrationTest" time="0.044">
+    <system-out><![CDATA[2026-11-23T02:36:01.326+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=?
+2026-11-23T02:36:01.332+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        categories
+        (created_at, image_path, is_active, name, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.335+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (category_id, created_at, description, dietary_type, estimated_unit_cost, half_estimated_unit_cost, half_selling_price, has_half_portion, image_path, is_available, name, selling_price, sku, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.341+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#capabilities()
+2026-11-23T02:36:01.343+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.343+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [{round_off=true}]
+2026-11-23T02:36:01.349+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#held()
+2026-11-23T02:36:01.355+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.status=? 
+    order by
+        b1_0.created_at
+2026-11-23T02:36:01.358+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.359+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [[]]
+]]></system-out>
+  </testcase>
+  <testcase name="optionalRoundOffPersistsAndReconcilesPaymentAndRetries" classname="com.sambarspicy.BillingIntegrationTest" time="0.566">
+    <system-out><![CDATA[2026-11-23T02:36:01.370+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=?
+2026-11-23T02:36:01.372+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        categories
+        (created_at, image_path, is_active, name, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.375+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        menu_items
+        (category_id, created_at, description, dietary_type, estimated_unit_cost, half_estimated_unit_cost, half_selling_price, has_half_portion, image_path, is_available, name, selling_price, sku, sort_order, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.381+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.383+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.385+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        menu_items 
+    set
+        category_id=?,
+        description=?,
+        dietary_type=?,
+        estimated_unit_cost=?,
+        half_estimated_unit_cost=?,
+        half_selling_price=?,
+        has_half_portion=?,
+        image_path=?,
+        is_available=?,
+        name=?,
+        selling_price=?,
+        sku=?,
+        sort_order=?,
+        updated_at=? 
+    where
+        id=?
+2026-11-23T02:36:01.390+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.392+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.394+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.398+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.400+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.402+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:01.405+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:01.407+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bc1_0.business_date,
+        bc1_0.last_sequence,
+        bc1_0.updated_at 
+    from
+        bill_counters bc1_0 
+    where
+        bc1_0.business_date=? for update
+2026-11-23T02:36:01.408+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        bill_counters 
+    set
+        last_sequence=?,
+        updated_at=? 
+    where
+        business_date=?
+2026-11-23T02:36:01.411+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bills
+        (bill_number, business_date, cancel_reason, cancelled_at, cancelled_by, checkout_key, created_at, created_by, discount_amount, held_at, hold_label, item_count, note, paid_at, paid_by, round_off_amount, status, store_address_snapshot, store_name_snapshot, store_phone_snapshot, subtotal_amount, total_amount, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.416+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.417+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_payments
+        (amount, bill_id, payment_method, recorded_at, recorded_by, reference_number, tendered_amount) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.420+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        audit_logs
+        (action, actor_user_id, created_at, entity_id, entity_type, ip_address, new_data, old_data) 
+    values
+        (?, ?, ?, ?, ?, ?, cast(? as json), cast(? as json))
+2026-11-23T02:36:01.423+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.423+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=3, billNumber=SNS-20261123-0003, checkoutKey=727c444b-5d41-48c1-a307-21dfab60801a, busines (truncated)...]
+2026-11-23T02:36:01.426+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.427+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.429+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.432+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.434+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.434+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.437+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.440+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.440+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=3, billNumber=SNS-20261123-0003, checkoutKey=727c444b-5d41-48c1-a307-21dfab60801a, busines (truncated)...]
+2026-11-23T02:36:01.443+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.443+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.446+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.450+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.453+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.454+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.456+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.sambarspicy.exception.GlobalExceptionHandler#handleConflict(ConflictException)
+2026-11-23T02:36:01.456+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.456+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.sambarspicy.dto.ErrorResponse@4ec35e4a]
+2026-11-23T02:36:01.457+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.sambarspicy.exception.ConflictException: Checkout key already belongs to a different payment]
+2026-11-23T02:36:01.459+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#get(Long)
+2026-11-23T02:36:01.463+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.id=?
+2026-11-23T02:36:01.465+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.467+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.469+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-11-23T02:36:01.471+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.471+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=3, billNumber=SNS-20261123-0003, checkoutKey=727c444b-5d41-48c1-a307-21dfab60801a, busines (truncated)...]
+2026-11-23T02:36:01.474+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.476+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.479+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        menu_items 
+    set
+        category_id=?,
+        description=?,
+        dietary_type=?,
+        estimated_unit_cost=?,
+        half_estimated_unit_cost=?,
+        half_selling_price=?,
+        has_half_portion=?,
+        image_path=?,
+        is_available=?,
+        name=?,
+        selling_price=?,
+        sku=?,
+        sort_order=?,
+        updated_at=? 
+    where
+        id=?
+2026-11-23T02:36:01.484+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.485+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.487+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.489+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.492+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.494+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:01.496+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:01.498+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bc1_0.business_date,
+        bc1_0.last_sequence,
+        bc1_0.updated_at 
+    from
+        bill_counters bc1_0 
+    where
+        bc1_0.business_date=? for update
+2026-11-23T02:36:01.500+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        bill_counters 
+    set
+        last_sequence=?,
+        updated_at=? 
+    where
+        business_date=?
+2026-11-23T02:36:01.502+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bills
+        (bill_number, business_date, cancel_reason, cancelled_at, cancelled_by, checkout_key, created_at, created_by, discount_amount, held_at, hold_label, item_count, note, paid_at, paid_by, round_off_amount, status, store_address_snapshot, store_name_snapshot, store_phone_snapshot, subtotal_amount, total_amount, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.504+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.505+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_payments
+        (amount, bill_id, payment_method, recorded_at, recorded_by, reference_number, tendered_amount) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.506+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        audit_logs
+        (action, actor_user_id, created_at, entity_id, entity_type, ip_address, new_data, old_data) 
+    values
+        (?, ?, ?, ?, ?, ?, cast(? as json), cast(? as json))
+2026-11-23T02:36:01.508+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.508+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=4, billNumber=SNS-20261123-0004, checkoutKey=aad01979-b64f-41d0-abef-2ae219760ebd, busines (truncated)...]
+2026-11-23T02:36:01.511+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.512+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.515+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.518+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.521+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.522+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.523+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.525+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.526+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=4, billNumber=SNS-20261123-0004, checkoutKey=aad01979-b64f-41d0-abef-2ae219760ebd, busines (truncated)...]
+2026-11-23T02:36:01.530+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.532+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.535+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.537+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.540+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.541+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.543+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.sambarspicy.exception.GlobalExceptionHandler#handleConflict(ConflictException)
+2026-11-23T02:36:01.543+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.543+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.sambarspicy.dto.ErrorResponse@2f951b24]
+2026-11-23T02:36:01.544+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.sambarspicy.exception.ConflictException: Checkout key already belongs to a different payment]
+2026-11-23T02:36:01.549+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#get(Long)
+2026-11-23T02:36:01.550+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.id=?
+2026-11-23T02:36:01.551+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.552+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.552+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-11-23T02:36:01.553+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.553+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=4, billNumber=SNS-20261123-0004, checkoutKey=aad01979-b64f-41d0-abef-2ae219760ebd, busines (truncated)...]
+2026-11-23T02:36:01.555+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.556+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.557+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        menu_items 
+    set
+        category_id=?,
+        description=?,
+        dietary_type=?,
+        estimated_unit_cost=?,
+        half_estimated_unit_cost=?,
+        half_selling_price=?,
+        has_half_portion=?,
+        image_path=?,
+        is_available=?,
+        name=?,
+        selling_price=?,
+        sku=?,
+        sort_order=?,
+        updated_at=? 
+    where
+        id=?
+2026-11-23T02:36:01.560+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.561+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.566+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.569+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.571+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.573+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:01.574+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:01.575+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bc1_0.business_date,
+        bc1_0.last_sequence,
+        bc1_0.updated_at 
+    from
+        bill_counters bc1_0 
+    where
+        bc1_0.business_date=? for update
+2026-11-23T02:36:01.576+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        bill_counters 
+    set
+        last_sequence=?,
+        updated_at=? 
+    where
+        business_date=?
+2026-11-23T02:36:01.576+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bills
+        (bill_number, business_date, cancel_reason, cancelled_at, cancelled_by, checkout_key, created_at, created_by, discount_amount, held_at, hold_label, item_count, note, paid_at, paid_by, round_off_amount, status, store_address_snapshot, store_name_snapshot, store_phone_snapshot, subtotal_amount, total_amount, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.580+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.585+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_payments
+        (amount, bill_id, payment_method, recorded_at, recorded_by, reference_number, tendered_amount) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.589+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        audit_logs
+        (action, actor_user_id, created_at, entity_id, entity_type, ip_address, new_data, old_data) 
+    values
+        (?, ?, ?, ?, ?, ?, cast(? as json), cast(? as json))
+2026-11-23T02:36:01.595+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.596+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=5, billNumber=SNS-20261123-0005, checkoutKey=cf00bc2b-0666-4e96-bddb-6ff2d790d297, busines (truncated)...]
+2026-11-23T02:36:01.605+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.606+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.609+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.616+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.621+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.622+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.626+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.634+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.634+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=5, billNumber=SNS-20261123-0005, checkoutKey=cf00bc2b-0666-4e96-bddb-6ff2d790d297, busines (truncated)...]
+2026-11-23T02:36:01.641+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.643+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.647+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.650+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.654+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.655+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.658+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.sambarspicy.exception.GlobalExceptionHandler#handleConflict(ConflictException)
+2026-11-23T02:36:01.658+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.658+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.sambarspicy.dto.ErrorResponse@7f0ec4e9]
+2026-11-23T02:36:01.658+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.sambarspicy.exception.ConflictException: Checkout key already belongs to a different payment]
+2026-11-23T02:36:01.661+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#get(Long)
+2026-11-23T02:36:01.665+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.id=?
+2026-11-23T02:36:01.668+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.671+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.674+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-11-23T02:36:01.678+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.679+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=5, billNumber=SNS-20261123-0005, checkoutKey=cf00bc2b-0666-4e96-bddb-6ff2d790d297, busines (truncated)...]
+2026-11-23T02:36:01.685+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.691+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.694+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        menu_items 
+    set
+        category_id=?,
+        description=?,
+        dietary_type=?,
+        estimated_unit_cost=?,
+        half_estimated_unit_cost=?,
+        half_selling_price=?,
+        has_half_portion=?,
+        image_path=?,
+        is_available=?,
+        name=?,
+        selling_price=?,
+        sku=?,
+        sort_order=?,
+        updated_at=? 
+    where
+        id=?
+2026-11-23T02:36:01.701+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.704+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.709+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.714+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.719+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.726+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:01.731+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:01.733+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bc1_0.business_date,
+        bc1_0.last_sequence,
+        bc1_0.updated_at 
+    from
+        bill_counters bc1_0 
+    where
+        bc1_0.business_date=? for update
+2026-11-23T02:36:01.735+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        bill_counters 
+    set
+        last_sequence=?,
+        updated_at=? 
+    where
+        business_date=?
+2026-11-23T02:36:01.738+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bills
+        (bill_number, business_date, cancel_reason, cancelled_at, cancelled_by, checkout_key, created_at, created_by, discount_amount, held_at, hold_label, item_count, note, paid_at, paid_by, round_off_amount, status, store_address_snapshot, store_name_snapshot, store_phone_snapshot, subtotal_amount, total_amount, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.740+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.742+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_payments
+        (amount, bill_id, payment_method, recorded_at, recorded_by, reference_number, tendered_amount) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.744+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        audit_logs
+        (action, actor_user_id, created_at, entity_id, entity_type, ip_address, new_data, old_data) 
+    values
+        (?, ?, ?, ?, ?, ?, cast(? as json), cast(? as json))
+2026-11-23T02:36:01.749+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.750+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=6, billNumber=SNS-20261123-0006, checkoutKey=1d501ccc-8013-4dc6-aa35-2b53508b161f, busines (truncated)...]
+2026-11-23T02:36:01.754+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.755+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.762+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.769+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.774+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.776+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.782+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.785+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.786+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=6, billNumber=SNS-20261123-0006, checkoutKey=1d501ccc-8013-4dc6-aa35-2b53508b161f, busines (truncated)...]
+2026-11-23T02:36:01.790+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#get(Long)
+2026-11-23T02:36:01.792+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.id=?
+2026-11-23T02:36:01.795+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.798+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.799+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-11-23T02:36:01.800+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.801+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=6, billNumber=SNS-20261123-0006, checkoutKey=1d501ccc-8013-4dc6-aa35-2b53508b161f, busines (truncated)...]
+2026-11-23T02:36:01.802+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.806+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=?
+2026-11-23T02:36:01.808+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        menu_items 
+    set
+        category_id=?,
+        description=?,
+        dietary_type=?,
+        estimated_unit_cost=?,
+        half_estimated_unit_cost=?,
+        half_selling_price=?,
+        has_half_portion=?,
+        image_path=?,
+        is_available=?,
+        name=?,
+        selling_price=?,
+        sku=?,
+        sort_order=?,
+        updated_at=? 
+    where
+        id=?
+2026-11-23T02:36:01.814+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.815+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.820+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.823+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.826+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.832+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        mi1_0.id,
+        mi1_0.category_id,
+        mi1_0.created_at,
+        mi1_0.description,
+        mi1_0.dietary_type,
+        mi1_0.estimated_unit_cost,
+        mi1_0.half_estimated_unit_cost,
+        mi1_0.half_selling_price,
+        mi1_0.has_half_portion,
+        mi1_0.image_path,
+        mi1_0.is_available,
+        mi1_0.name,
+        mi1_0.selling_price,
+        mi1_0.sku,
+        mi1_0.sort_order,
+        mi1_0.updated_at 
+    from
+        menu_items mi1_0 
+    where
+        mi1_0.id=? for update
+2026-11-23T02:36:01.836+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.created_at,
+        c1_0.image_path,
+        c1_0.is_active,
+        c1_0.name,
+        c1_0.sort_order,
+        c1_0.updated_at 
+    from
+        categories c1_0 
+    where
+        c1_0.id=? for update
+2026-11-23T02:36:01.841+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bc1_0.business_date,
+        bc1_0.last_sequence,
+        bc1_0.updated_at 
+    from
+        bill_counters bc1_0 
+    where
+        bc1_0.business_date=? for update
+2026-11-23T02:36:01.846+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    update
+        bill_counters 
+    set
+        last_sequence=?,
+        updated_at=? 
+    where
+        business_date=?
+2026-11-23T02:36:01.849+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bills
+        (bill_number, business_date, cancel_reason, cancelled_at, cancelled_by, checkout_key, created_at, created_by, discount_amount, held_at, hold_label, item_count, note, paid_at, paid_by, round_off_amount, status, store_address_snapshot, store_name_snapshot, store_phone_snapshot, subtotal_amount, total_amount, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.852+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_items
+        (bill_id, created_at, estimated_unit_cost_snapshot, item_name_snapshot, line_discount_amount, menu_item_id, portion, quantity, unit_price) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.854+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        bill_payments
+        (amount, bill_id, payment_method, recorded_at, recorded_by, reference_number, tendered_amount) 
+    values
+        (?, ?, ?, ?, ?, ?, ?)
+2026-11-23T02:36:01.856+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        audit_logs
+        (action, actor_user_id, created_at, entity_id, entity_type, ip_address, new_data, old_data) 
+    values
+        (?, ?, ?, ?, ?, ?, cast(? as json), cast(? as json))
+2026-11-23T02:36:01.861+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.861+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=7, billNumber=SNS-20261123-0007, checkoutKey=b02d7a6f-6b99-45f5-a709-ac0eff816788, busines (truncated)...]
+2026-11-23T02:36:01.869+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#checkout(CheckoutRequest, String, Principal)
+2026-11-23T02:36:01.871+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CheckoutRequest[items=[LineRequest[menuItemId=5, portion=null, quantity=1, lineDiscountAmount=null,  (truncated)...]
+2026-11-23T02:36:01.874+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        ss1_0.id,
+        ss1_0.address,
+        ss1_0.business_timezone,
+        ss1_0.currency_code,
+        ss1_0.phone,
+        ss1_0.receipt_footer,
+        ss1_0.store_name,
+        ss1_0.updated_at,
+        ss1_0.updated_by 
+    from
+        store_settings ss1_0 
+    where
+        ss1_0.id=1 for update
+2026-11-23T02:36:01.882+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-11-23T02:36:01.886+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.checkout_key=?
+2026-11-23T02:36:01.888+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.890+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.894+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.895+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=7, billNumber=SNS-20261123-0007, checkoutKey=b02d7a6f-6b99-45f5-a709-ac0eff816788, busines (truncated)...]
+2026-11-23T02:36:01.900+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.sambarspicy.controller.BillingController#get(Long)
+2026-11-23T02:36:01.902+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        b1_0.id,
+        b1_0.bill_number,
+        b1_0.business_date,
+        b1_0.cancel_reason,
+        b1_0.cancelled_at,
+        b1_0.cancelled_by,
+        b1_0.checkout_key,
+        b1_0.created_at,
+        b1_0.created_by,
+        b1_0.discount_amount,
+        b1_0.held_at,
+        b1_0.hold_label,
+        b1_0.item_count,
+        b1_0.note,
+        b1_0.paid_at,
+        b1_0.paid_by,
+        b1_0.round_off_amount,
+        b1_0.status,
+        b1_0.store_address_snapshot,
+        b1_0.store_name_snapshot,
+        b1_0.store_phone_snapshot,
+        b1_0.subtotal_amount,
+        b1_0.total_amount,
+        b1_0.updated_at 
+    from
+        bills b1_0 
+    where
+        b1_0.id=?
+2026-11-23T02:36:01.905+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bp1_0.id,
+        bp1_0.amount,
+        bp1_0.bill_id,
+        bp1_0.change_amount,
+        bp1_0.payment_method,
+        bp1_0.recorded_at,
+        bp1_0.recorded_by,
+        bp1_0.reference_number,
+        bp1_0.tendered_amount 
+    from
+        bill_payments bp1_0 
+    where
+        bp1_0.bill_id=?
+2026-11-23T02:36:01.910+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        bi1_0.bill_id,
+        bi1_0.id,
+        bi1_0.created_at,
+        bi1_0.estimated_unit_cost_snapshot,
+        bi1_0.item_name_snapshot,
+        bi1_0.line_discount_amount,
+        bi1_0.line_net_total,
+        bi1_0.line_total,
+        bi1_0.menu_item_id,
+        bi1_0.portion,
+        bi1_0.quantity,
+        bi1_0.unit_price 
+    from
+        bill_items bi1_0 
+    where
+        bi1_0.bill_id=?
+2026-11-23T02:36:01.914+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.full_name,
+        u1_0.is_active,
+        u1_0.last_login_at,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-11-23T02:36:01.919+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-11-23T02:36:01.920+05:30 DEBUG 25640 --- [sambar-spicy-backend] [           main] m.m.a.RequestResponseBodyMethodProcessor : Writing [Detail[id=7, billNumber=SNS-20261123-0007, checkoutKey=b02d7a6f-6b99-45f5-a709-ac0eff816788, busines (truncated)...]
+]]></system-out>
+  </testcase>
+</testsuite>

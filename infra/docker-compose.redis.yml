@@ -1,0 +1,13 @@
+# Optional, separate local cache. Does not modify an existing Redis container.
+services:
+  redis:
+    image: redis:8
+    ports:
+      - "127.0.0.1:${REDIS_LOCAL_PORT:-6380}:6379"
+    # Cache is disposable; no host volume or persistent business data.
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
