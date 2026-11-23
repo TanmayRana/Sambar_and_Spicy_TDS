@@ -35,10 +35,10 @@ public interface MenuItemRepository extends JpaRepository<MenuItem, Long> {
 
     @Query("SELECT m FROM MenuItem m WHERE (:categoryId IS NULL OR m.category.id = :categoryId) " +
            "AND (:activeOnly = false OR m.isAvailable = true) " +
-           "AND (:query IS NULL OR TRIM(:query) = '' " +
-           "     OR LOWER(m.name) LIKE LOWER(CONCAT('%', TRIM(:query), '%')) " +
-           "     OR LOWER(m.sku) LIKE LOWER(CONCAT('%', TRIM(:query), '%')) " +
-           "     OR LOWER(m.description) LIKE LOWER(CONCAT('%', TRIM(:query), '%'))) " +
+           "AND (CAST(:query AS string) IS NULL OR CAST(:query AS string) = '' " +
+           "     OR LOWER(m.name) LIKE CONCAT('%', LOWER(CAST(:query AS string)), '%') " +
+           "     OR LOWER(m.sku) LIKE CONCAT('%', LOWER(CAST(:query AS string)), '%') " +
+           "     OR LOWER(m.description) LIKE CONCAT('%', LOWER(CAST(:query AS string)), '%')) " +
            "ORDER BY m.sortOrder ASC, m.name ASC")
     List<MenuItem> searchMenuItems(@Param("categoryId") Long categoryId,
                                   @Param("query") String query,
